@@ -34,7 +34,7 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'CommandoVM', keyFileVariable: 'SSH_KEY')]) {
                     script {
-                        def artifactPath = "${MALWARE}/bin/Release/${MALWARE}.exe"
+                        def artifactPath = "${MALWARE}/bin/Release/net8.0/win-x64/${MALWARE}.exe"
 
                         // Secure SCP file transfer
                         sh """
