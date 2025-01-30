@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Danger\\Maldev\\CRTLoader\\CRTLoader.csproj": {}
+    "C:\\Danger\\GitHub\\MalTrash\\CRTLoader\\CRTLoader.csproj": {}
   },
   "projects": {
-    "C:\\Danger\\Maldev\\CRTLoader\\CRTLoader.csproj": {
+    "C:\\Danger\\GitHub\\MalTrash\\CRTLoader\\CRTLoader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Danger\\Maldev\\CRTLoader\\CRTLoader.csproj",
+        "projectUniqueName": "C:\\Danger\\GitHub\\MalTrash\\CRTLoader\\CRTLoader.csproj",
         "projectName": "CRTLoader",
-        "projectPath": "C:\\Danger\\Maldev\\CRTLoader\\CRTLoader.csproj",
+        "projectPath": "C:\\Danger\\GitHub\\MalTrash\\CRTLoader\\CRTLoader.csproj",
         "packagesPath": "C:\\Users\\MickeyDeBaets\\.nuget\\packages\\",
-        "outputPath": "C:\\Danger\\Maldev\\CRTLoader\\obj\\",
+        "outputPath": "C:\\Danger\\GitHub\\MalTrash\\CRTLoader\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MickeyDeBaets\\AppData\\Roaming\\NuGet\\NuGet.Config",
