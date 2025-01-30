@@ -28,7 +28,7 @@ pipeline {
 
         stage('Transfer and Execute on Windows VM') {
             steps {
-                withCredentials([sshUserPrivateKey(credentialsId: 'windows-ssh-key', keyFileVariable: 'CommandoVM')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'CommandoVM', keyFileVariable: 'SSH_KEY')]) {
                     script {
                         def artifactPath = "${params.PROJECT}/bin/Release/${params.PROJECT}.exe"
 
