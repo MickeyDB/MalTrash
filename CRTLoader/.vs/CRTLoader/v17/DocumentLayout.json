@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Danger\\Maldev\\CRTLoader\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A71F0F14-C96D-4DEF-8D67-4AFF7B7F1E0B}|CRTLoader.csproj|c:\\danger\\maldev\\crtloader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71F0F14-C96D-4DEF-8D67-4AFF7B7F1E0B}|CRTLoader.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71F0F14-C96D-4DEF-8D67-4AFF7B7F1E0B}|CRTLoader.csproj|c:\\danger\\maldev\\crtloader\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71F0F14-C96D-4DEF-8D67-4AFF7B7F1E0B}|CRTLoader.csproj|solutionrelative:win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Win32.cs",
+              "DocumentMoniker": "C:\\Danger\\Maldev\\CRTLoader\\Win32.cs",
+              "RelativeDocumentMoniker": "Win32.cs",
+              "ToolTip": "C:\\Danger\\Maldev\\CRTLoader\\Win32.cs",
+              "RelativeToolTip": "Win32.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T20:49:22.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Danger\\Maldev\\CRTLoader\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Danger\\Maldev\\CRTLoader\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T20:47:07.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
