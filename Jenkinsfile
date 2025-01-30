@@ -26,7 +26,7 @@ pipeline {
 
 	stage('Verify Build Output') {
             steps {
-                sh 'ls -lah ${params.PROJECT}/bin/Release/'
+                sh "ls -lah ${MALWARE}/bin/Release/"
             }
         }
 
