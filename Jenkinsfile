@@ -31,12 +31,12 @@ pipeline {
                         def artifactPath = "${MALWARE}/bin/Release/${MALWARE}.exe"
 
                         // Secure SCP file transfer
-                        shell """
+                        sh """
                             scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:\\Users\\Public\\not_malware.exe
                         """
 
                         // Secure SSH execution
-                        shell """
+                        sh """
                             ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:\\Users\\Public\\not_malware.exe"
                         """
                     }
