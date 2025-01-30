@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     def projectPath = "${MALWARE}"
-                    def solutionFile = "${projectPath}/${MALWARE}.sln"
+                    def solutionFile = "${projectPath}/${MALWARE}.csproj"
                     
                     echo "Building ${MALWARE}..."
                     sh "/usr/local/share/dotnet/dotnet build ${solutionFile} --configuration Release -r win-x64 --self-contained false"
