@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRTLoader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebc3260d0f1dfe6d5ba09352500f87757087d2e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d8d27f50528e0319a9e61e4da74391a5cff3e24")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRTLoader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRTLoader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

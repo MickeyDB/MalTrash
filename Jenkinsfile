@@ -19,7 +19,7 @@ pipeline {
                     def solutionFile = "${projectPath}/${MALWARE}.sln"
                     
                     echo "Building ${MALWARE}..."
-                    sh "/usr/local/share/dotnet/dotnet build ${solutionFile} /p:Configuration=Release"
+                    sh "/usr/local/share/dotnet/dotnet build ${solutionFile} --configuration Release -r win-x64 --self-contained false"
                 }
             }
         }
