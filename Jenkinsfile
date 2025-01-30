@@ -19,8 +19,14 @@ pipeline {
                     def solutionFile = "${projectPath}/${MALWARE}.sln"
                     
                     echo "Building ${MALWARE}..."
-                    shell "msbuild ${solutionFile} /p:Configuration=Release"
+                    sh 'msbuild ${solutionFile} /p:Configuration=Release'
                 }
+            }
+        }
+
+	stage('Verify Build Output') {
+            steps {
+                sh 'ls -lah ${params.PROJECT}/bin/Release/'
             }
         }
 
@@ -31,14 +37,14 @@ pipeline {
                         def artifactPath = "${MALWARE}/bin/Release/${MALWARE}.exe"
 
                         // Secure SCP file transfer
-                        sh """
+                        sh '''
                             scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:\\Users\\Public\\not_malware.exe
-                        """
+                        '''
 
                         // Secure SSH execution
-                        sh """
+                        sh '''
                             ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:\\Users\\Public\\not_malware.exe"
-                        """
+                        '''
                     }
                 }
             }
