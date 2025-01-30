@@ -38,12 +38,12 @@ pipeline {
 
                         // Secure SCP file transfer
                         sh '''
-                            scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:\\Users\\Public\\not_malware.exe
+                            scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:/Users/Public/not_malware.exe
                         '''
 
                         // Secure SSH execution
                         sh '''
-                            ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:\\Users\\Public\\not_malware.exe"
+                            ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:/Users/Public/not_malware.exe"
                         '''
                     }
                 }
