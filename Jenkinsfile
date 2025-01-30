@@ -16,17 +16,17 @@ pipeline {
             steps {
                 script {
                     def projectPath = "${MALWARE}"
-                    def solutionFile = "${projectPath}/${MALWARE}.csproj"
+                    def solutionFile = "${projectPath}/${MALWARE}.sln"
                     
                     echo "Building ${MALWARE}..."
-                    sh "/usr/local/share/dotnet/dotnet build ${solutionFile} --configuration Release -r win-x64 --self-contained false"
+                    sh "/usr/local/share/dotnet/dotnet publish ${solutionFile} --configuration Release -r win-x64 --self-contained true -p:PublishSingleFile=true"
                 }
             }
         }
 
 	stage('Verify Build Output') {
             steps {
-                sh "ls -lah ${MALWARE}/bin/Release/"
+                sh "ls -lah ${MALWARE}/bin/Release/net8.0/win-x64/publish/"
             }
         }
 
@@ -34,7 +34,7 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'CommandoVM', keyFileVariable: 'SSH_KEY')]) {
                     script {
-                        def artifactPath = "${MALWARE}/bin/Release/net8.0/win-x64/${MALWARE}.exe"
+                        def artifactPath = "${MALWARE}/bin/Release/net8.0/win-x64/publish/${MALWARE}.exe"
 
                         // Secure SCP file transfer
                         sh """
