@@ -19,7 +19,7 @@ pipeline {
                     def solutionFile = "${projectPath}/${MALWARE}.sln"
                     
                     echo "Building ${MALWARE}..."
-                    sh "msbuild ${solutionFile} /p:Configuration=Release"
+                    sh "/Library/Frameworks/Mono.framework/Versions/Current/Commands/msbuild ${solutionFile} /p:Configuration=Release"
                 }
             }
         }
