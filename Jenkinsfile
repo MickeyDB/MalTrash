@@ -1,11 +1,9 @@
 pipeline {
     agent any
-    parameters {
-        choice(name: 'PROJECT', choices: ['CRTLoader', 'ProjectB', 'ProjectC'], description: 'Select the project to build')
-    }
     environment {
         REMOTE_USER = "Mickey"
         REMOTE_HOST = "10.3.10.110"
+	MALWARE = "CRTLoader"
     }
     stages {
         stage('Checkout Code') {
@@ -17,10 +15,10 @@ pipeline {
         stage('Build Project') {
             steps {
                 script {
-                    def projectPath = "${params.PROJECT}"
-                    def solutionFile = "${projectPath}/${params.PROJECT}.sln"
+                    def projectPath = "${MALWARE}"
+                    def solutionFile = "${projectPath}/${MALWARE}.sln"
                     
-                    echo "Building ${params.PROJECT}..."
+                    echo "Building ${MALWARE}..."
                     shell "msbuild ${solutionFile} /p:Configuration=Release"
                 }
             }
@@ -30,16 +28,16 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'CommandoVM', keyFileVariable: 'SSH_KEY')]) {
                     script {
-                        def artifactPath = "${params.PROJECT}/bin/Release/${params.PROJECT}.exe"
+                        def artifactPath = "${MALWARE}/bin/Release/${MALWARE}.exe"
 
                         // Secure SCP file transfer
                         shell """
-                            scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:\\Users\\Public\\malware.exe
+                            scp -i $SSH_KEY ${artifactPath} ${REMOTE_USER}@${REMOTE_HOST}:C:\\Users\\Public\\not_malware.exe
                         """
 
                         // Secure SSH execution
                         shell """
-                            ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:\\Users\\Public\\malware.exe"
+                            ssh -i $SSH_KEY ${REMOTE_USER}@${REMOTE_HOST} "C:\\Users\\Public\\not_malware.exe"
                         """
                     }
                 }
